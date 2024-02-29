@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const usePlants = () => ({
     getplants: async() => {
-        const response = await axios.get('http://localhost:3333/getPlants')
+        const response = await axios.get('https://live-with-plants-backend.vercel.app/getPlants')
         console.log(response.data)
 
         return {
@@ -11,19 +11,19 @@ export const usePlants = () => ({
         }
     },
     getEdiblePlants: async() => {
-        const response = await axios.get(`http://localhost:3333/getEdiblePlants`)
+        const response = await axios.get(`https://live-with-plants-backend.vercel.app/getEdiblePlants`)
         return {
             plants: response.data.data
         }
     },
     getRedFlowers: async() => {
-        const response = await axios.get(`http://localhost:3333/getRedFlowers`)
+        const response = await axios.get(`https://live-with-plants-backend.vercel.app/getRedFlowers`)
         return {
             plants: response.data.data
         }
     },
     getYellowFlowers: async() => {
-        const response = await axios.get(`http://localhost:3333/getYellowFlowers`)
+        const response = await axios.get(`https://live-with-plants-backend.vercel.app/getYellowFlowers`)
         return {
             plants: response.data.data
         }
